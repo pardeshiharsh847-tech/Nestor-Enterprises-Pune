@@ -760,22 +760,93 @@ textarea.form-control {
 
 /* Animations */
 .gsap-reveal {
-  visibility: hidden; /* Prevent flash of unstyled content before GSAP runs */
+  visibility: hidden;
 }
 
-/* Responsive */
+/* Responsive Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001; /* Above the mobile menu */
+  transition: color var(--transition-smooth);
+}
+
+.desktop-only {
+  display: inline-flex;
+}
+
+/* Tablet */
 @media (max-width: 1024px) {
-  .hero h1 { font-size: 4rem; }
-  .agent-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 4rem !important; }
+  .agent-grid { grid-template-columns: 1fr; gap: 40px; }
   .contact-wrapper { grid-template-columns: 1fr; }
-  .why-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-  .nav-links { display: none; } /* Add hamburger later */
-  .hero h1 { font-size: 3rem; }
-  .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
-  .gallery-item:nth-child(n) { grid-column: span 1; grid-row: span 1; aspect-ratio: 16/9; }
-  .footer-grid { grid-template-columns: 1fr; }
+  /* Navigation */
+  .desktop-only { display: none !important; }
+  .hamburger { display: block; }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1000;
+  }
+  
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-links a {
+    font-size: 1.8rem;
+  }
+
+  /* Layout & Spacing */
+  .container {
+    padding: 0 16px;
+  }
+  
+  .section-padding {
+    padding: 4rem 0;
+  }
+
+  /* Typography Scaling */
+  .hero h1 { font-size: 2.8rem !important; line-height: 1.1; }
+  .hero p { font-size: 1.1rem !important; }
+  .section-header h2, .contact-info-panel h3, .why-content h2 { font-size: 2.2rem !important; }
+  .page-hero h1 { font-size: 2.5rem !important; }
+  .agent-content h1 { font-size: 2.8rem !important; }
+  
+  /* Components */
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .property-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; gap: 20px; }
+  
+  .contact-info-panel, .contact-form { padding: 30px 20px; }
+  
+  .agent-image-wrapper { aspect-ratio: auto !important; padding: 30px !important; }
+  
+  .experience-badge { padding: 15px; }
+  .experience-badge span { font-size: 2.2rem; }
 }
