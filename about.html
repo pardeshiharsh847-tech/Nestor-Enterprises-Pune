@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>About Us | Nestor Enterprises</title>
+  <meta name="description" content="Learn about Nestor Enterprises, the leading real estate consultants in Warje, Pune.">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .page-hero {
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(184, 156, 109, 0.1) 0%, transparent 70%);
+      padding-top: 80px;
+    }
+    .page-hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    .dark-theme .page-hero {
+      background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+    }
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="https://i.postimg.cc/RFfjQD89/Nestor-Enterprises.png" alt="Nestor Enterprises Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" style="color: var(--primary-color);">About Us</a></li>
+        <li><a href="agent.html">Agent</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+          <i class="ph ph-sun icon-sun"></i>
+          <i class="ph ph-moon icon-moon"></i>
+        </button>
+        <a href="tel:+919325593498" class="btn btn-outline"><i class="ph ph-phone"></i> Call Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <header class="page-hero">
+    <div class="container">
+      <h1 class="gsap-reveal-text">About Nestor Enterprises</h1>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section-padding">
+    <div class="container agent-grid">
+      <div class="agent-image-wrapper gsap-fade-up" style="background-color: var(--secondary-bg); padding: 50px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/5;">
+        <img src="https://i.postimg.cc/RFfjQD89/Nestor-Enterprises.png" alt="Nestor Enterprises" style="max-width: 90%; max-height: 90%; object-fit: contain; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      
+      <div style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.8;">
+        <p class="gsap-fade-up" style="margin-bottom: 1.5rem;">
+          At Nestor Enterprises, we specialize in helping clients buy, sell, and rent properties with confidence in Warje, Pune. With over 16 years of experience in the local real estate market, we have built a strong reputation for trusted consultation, transparent dealings, and personalized property solutions.
+        </p>
+        <p class="gsap-fade-up" style="margin-bottom: 1.5rem;">
+          From residential apartments and family homes to investment opportunities and commercial spaces, we understand the evolving needs of both property owners and buyers. Our deep knowledge of the Warje real estate landscape allows us to guide clients toward informed and profitable decisions based on real market insights.
+        </p>
+        <p class="gsap-fade-up" style="margin-bottom: 1.5rem;">
+          Whether you are searching for the right property, looking to sell at the best value, or seeking reliable rental solutions, Nestor Enterprises ensures a smooth and professional experience at every step.
+        </p>
+        <p class="gsap-fade-up">
+          Our commitment is simple — honest guidance, strong local expertise, and long-term client relationships built on trust and results.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://i.postimg.cc/RFfjQD89/Nestor-Enterprises.png" alt="Nestor Enterprises" style="height: 50px;">
+          <p>Premium real estate consulting and brokerage services in Pune, built on 16+ years of trust and market expertise.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="social-btn"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="social-btn"><i class="ph ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="agent.html">Manish Rathod</a></li>
+            <li><a href="index.html#properties">Properties</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Property Buying</a></li>
+            <li><a href="#">Property Selling</a></li>
+            <li><a href="#">Rental Properties</a></li>
+            <li><a href="#">Investment Consulting</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Business Hours</h4>
+          <ul>
+            <li>Mon - Sat: 10:00 AM - 7:00 PM</li>
+            <li>Sunday: By Appointment</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Nestor Enterprises. All rights reserved. Designed with precision.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919325593498" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="ph ph-whatsapp-logo"></i>
+  </a>
+
+  <!-- CDNs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  
+  <script src="main.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>
